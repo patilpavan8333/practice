@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  frontend:
+    image: nginx
+  backend:
+    build: .
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
